@@ -17,7 +17,7 @@ The standard images (`jekyll/jekyll`) include a default set of "dev" packages, a
 #### Usage
 
 ```sh
-export JEKYLL_VERSION=3.8
+export JEKYLL_VERSION=4.2
 docker run --rm \
   --volume="$PWD:/srv/jekyll" \
   -it jekyll/jekyll:$JEKYLL_VERSION \
@@ -31,7 +31,7 @@ The builder image comes with extra stuff that is not included in the standard im
 #### Usage
 
 ```sh
-export JEKYLL_VERSION=3.8
+export JEKYLL_VERSION=4.2
 docker run --rm \
   --volume="$PWD:/srv/jekyll" \
   -it jekyll/builder:$JEKYLL_VERSION \
@@ -47,7 +47,7 @@ The minimal image skips all the extra gems, all the extra dev dependencies and l
 ***You will need to provide a `.apk` file if you intend to use anything like Nokogiri or otherwise, we do not install any development headers or dependencies so C based gems will fail to install.***
 
 ```sh
-export JEKYLL_VERSION=3.8
+export JEKYLL_VERSION=4.2
 docker run --rm \
   --volume="$PWD:/srv/jekyll" \
   -it jekyll/minimal:$JEKYLL_VERSION \
@@ -63,7 +63,7 @@ Jekyll Docker will attempt to install any dependencies that you list inside of y
 If you provide a `Gemfile` and would like to update your `Gemfile.lock` you can run
 
 ```sh
-export JEKYLL_VERSION=3.8
+export JEKYLL_VERSION=4.2
 docker run --rm \
   --volume="$PWD:/srv/jekyll" \
   -it jekyll/jekyll:$JEKYLL_VERSION \
@@ -81,7 +81,7 @@ You can enable caching in Jekyll Docker by using a `docker --volume` that points
 ### Usage
 
 ```sh
-export JEKYLL_VERSION=3.8
+export JEKYLL_VERSION=4.2
 docker run --rm \
   --volume="$PWD:/srv/jekyll" \
   --volume="$PWD/vendor/bundle:/usr/local/bundle" \
